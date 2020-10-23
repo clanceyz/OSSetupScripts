@@ -1,5 +1,5 @@
 # About
-Scripts for setting up convenient utilities on new Operating Systems.
+Scripts for setting up convenient utilities and security features on new Operating Systems.
 
 # install
 * ubuntu
