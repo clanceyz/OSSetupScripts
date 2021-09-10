@@ -15,7 +15,7 @@ Scripts for setting up security features and convenient utilities on Operating S
 
 # Warning
 * __First of all, setup a ssh key__, otherwise you will no longer be able to log in to ssh because of security settings. The easiest way is to use __ssh-copy-id__ command
-* The ssh port will change to __60294__ for security concern.
+* The ssh port will be changed from __22__ to __60294__ for security concern.
 
 # Install
 * Ubuntu
