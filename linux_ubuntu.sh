@@ -51,7 +51,7 @@ echo 'alias la="ls -lha"' >> "${_HOME}/.zshrc"
 echo 'alias lt="ls -lht"' >> "${_HOME}/.zshrc"
 echo '' >> "${_HOME}/.zshrc"
 chown -R ${_USER}:${_USER} "${_HOME}/.oh-my-zsh"
-chsh -s /usr/bin/zsh
+su ${_USER} -c "chsh -s /usr/bin/zsh"
 
 ## pyenv
 info "Installing pyenv"
@@ -66,6 +66,15 @@ chown -R ${_USER}:${_USER} "${_HOME}/.pyenv"
 info "Installing latest python"
 su ${_USER} -c "zsh -c \". ~/.zshrc; git clone https://github.com/momo-lab/xxenv-latest.git /home/ubuntu/.pyenv/plugins/xxenv-latest; pyenv latest install; pyenv latest global\""
 
+## docker
+info "Installing docker"
+curl -fsSL https://get.docker.com | sh
+docker 
+curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+docker --version
+docker-compose --version
+
 ## tmux
 info "Setting up tmux"
 echo "set-option -g prefix C-v" > "${_HOME}/.tmux.conf"
@@ -76,6 +85,5 @@ chown -R ${_USER}:${_USER} "${HOME}/.tmux.conf"
 chown -R ${_USER}:${_USER} ${HOME}/.ssh
 
 info "Done"
-
 info "You can now login ssh on new port ${_SSH_PORT}"
 

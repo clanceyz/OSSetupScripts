@@ -12,6 +12,7 @@ Scripts for setting up security features and convenient utilities on Operating S
     * oh-my-zsh: https://github.com/ohmyzsh/ohmyzsh.
     * zsh-autosuggestions: https://github.com/zsh-users/zsh-autosuggestions.
     * Change tmux shortcut from C-b to C-v to resolve conflict with cursor back shortcut of bash/zsh.
+    * docker & docker-compose: https://www.docker.com/
 
 # Warning
 * __First of all, setup a ssh key__, otherwise you will no longer be able to log in to ssh because of security settings. The easiest way is to use __ssh-copy-id__ command
