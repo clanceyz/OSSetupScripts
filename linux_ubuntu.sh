@@ -40,11 +40,15 @@ export ZSH="${_HOME}/.oh-my-zsh"
 info "Installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-${_HOME}/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-${_HOME}/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 mv ~/.zshrc "${_HOME}"
 sed -i 's/# DISABLE_AUTO_UPDATE="true"/DISABLE_AUTO_UPDATE="true"/g' "${_HOME}/.zshrc"
-sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions)/g' "${_HOME}/.zshrc"
+sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-history-substring-search)/g' "${_HOME}/.zshrc"
 echo '' >> "${_HOME}/.zshrc"
 echo 'PROMPT="%(!.%{%F{yellow}%}.)$USER@%{$fg[white]%}%M %{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}"' >> "${_HOME}/.zshrc"
+echo '' >> "${_HOME}/.zshrc"
+echo 'bindkey '^P' history-substring-search-up' >> "${_HOME}/.zshrc"
+echo 'bindkey '^N' history-substring-search-down' >> "${_HOME}/.zshrc"
 echo '' >> "${_HOME}/.zshrc"
 echo 'alias l="ls -lh"' >> "${_HOME}/.zshrc"
 echo 'alias la="ls -lha"' >> "${_HOME}/.zshrc"
