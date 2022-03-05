@@ -25,7 +25,25 @@ fi
 # install dependencies
 info "Installing dependencies"
 apt update
-apt-get install -y vim curl wget tmux net-tools git zsh rsync gcc make openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev libffi-dev zlib1g-dev openjdk-8-jdk
+apt-get install -y vim \
+  curl \
+  wget \
+  tmux \
+  net-tools \
+  git \
+  zsh \
+  rsync \
+  gcc \
+  make \
+  openssl \
+  libssl-dev \
+  libbz2-dev \
+  libreadline-dev \
+  libsqlite3-dev \
+  libffi-dev \
+  zlib1g-dev \
+  openjdk-8-jdk \
+  sysstat
 
 # reinforce ssh
 info "Setting up ssh reinforcement"
@@ -90,4 +108,3 @@ chown -R ${_USER}:${_USER} ${HOME}/.ssh
 
 info "Done"
 info "You can now login ssh on new port ${_SSH_PORT}"
-
