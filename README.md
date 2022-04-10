@@ -25,5 +25,5 @@ curl -fsSL "https://github.com/clanceyz/OSEnvScripts/raw/master/macos.sh" | sh
 ```
 * Ubuntu
 ```shell
-curl -fsSL "https://github.com/clanceyz/OSEnvScripts/raw/master/linux_ubuntu.sh" | sudo sh
+curl -fsSL "https://github.com/clanceyz/OSEnvScripts/raw/master/ubuntu.sh" | sudo sh
 ```

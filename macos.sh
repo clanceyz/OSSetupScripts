@@ -62,19 +62,19 @@ echo '' >> ~/.zshrc
 
 # pyenv
 info "Installing pyenv"
-export PYENV_ROOT="~/.pyenv"
+export PYENV_ROOT=~/.pyenv
 curl https://pyenv.run | bash
-echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> "~/.zshrc"
-echo 'eval "$(pyenv init --path)"' >> "~/.zshrc"
-echo 'eval "$(pyenv virtualenv-init -)"' >> "~/.zshrc"
-echo '' >> "~/.zshrc"
+echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init --path)"' >> ~/.zshrc
+echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc
+echo '' >> ~/.zshrc
 
 # python
 info "Installing latest python"
 zsh -c ". ~/.zshrc; git clone https://github.com/momo-lab/pyenv-install-latest.git "$(pyenv root)"/plugins/pyenv-install-latest; pyenv install-latest"
 
 # setup tmux
-echo "set-option -g prefix C-v" > "~/.tmux.conf"
+echo "set-option -g prefix C-v" > ~/.tmux.conf
 
 info "Installing GUI apps"
 brew install --cask\
