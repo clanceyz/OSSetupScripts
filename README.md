@@ -19,7 +19,11 @@ Scripts for setting up security features and convenient utilities on Operating S
 * The ssh port will be changed from __22__ to __60294__ for security concern.
 
 # Install
+* macOS
+```shell
+curl -fsSL "https://github.com/clanceyz/OSEnvScripts/raw/master/macos.sh" | sudo sh
+```
 * Ubuntu
-```shell script
+```shell
 curl -fsSL "https://github.com/clanceyz/OSEnvScripts/raw/master/linux_ubuntu.sh" | sudo sh
 ```
