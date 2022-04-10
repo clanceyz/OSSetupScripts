@@ -21,7 +21,7 @@ Scripts for setting up security features and convenient utilities on Operating S
 # Install
 * macOS
 ```shell
-curl -fsSL "https://github.com/clanceyz/OSEnvScripts/raw/master/macos.sh" | sudo sh
+curl -fsSL "https://github.com/clanceyz/OSEnvScripts/raw/master/macos.sh" | sh
 ```
 * Ubuntu
 ```shell
