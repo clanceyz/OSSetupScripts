@@ -29,12 +29,10 @@ brew install\
     httpie\
     httrack\
     gron\
-    docker-compose\
     dependency-check\
     coreutils\
     gnu-sed\
-    docker\
-    docker-compose
+    docker
 
 ## oh-my-zsh
 info "Installing oh-my-zsh"
