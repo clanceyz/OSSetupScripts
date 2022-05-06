@@ -31,8 +31,7 @@ brew install\
     gron\
     dependency-check\
     coreutils\
-    gnu-sed\
-    docker
+    gnu-sed
 
 ## oh-my-zsh
 info "Installing oh-my-zsh"
@@ -76,6 +75,7 @@ echo "set-option -g prefix C-v" > ~/.tmux.conf
 
 info "Installing GUI apps"
 brew install --cask\
+    docker\
     smoothscroll\
     keka\
     clashx\
